@@ -47,8 +47,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
-console.log(twitter)
-
 
 
 // Receives challenge response check (CRC)
@@ -77,9 +75,9 @@ app.post('/webhooks/twitter', function(request, response) {
   response.send('200 OK')
 })
 
-const PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log("Hello from Cloud Run! The container started successfully and is listening for HTTP requests on ${PORT}");
+  console.log(`Hello from Cloud Run! The container started successfully and is listening for HTTP requests on ${PORT}`);
 });
 
 
