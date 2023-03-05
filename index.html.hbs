@@ -52,6 +52,11 @@
 	return myCanvas.toDataURL();
   }
   </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.min.js"
+    integrity="sha512-5ch7MAn3LJHCHL6ri6nmXAyaQRHfmug70F7IwEQ41rnNQSGAMVyZBPTTKlaptPnq/42RXbKb/lTHm+mCQc6lPg=="
+    crossorigin="anonymous"
+  ></script>
   <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
   <meta name="viewport" content="width=device-width">
   <meta charset="utf-8" />
@@ -68,14 +73,7 @@
       <p><a class="btn btn-primary btn-lg" href="https://leosn.xyz" role="button" target="_blank">leosn.xyz</a></p>
       <p>It's going to be super nice to do html again.</p>
       <!canvas id="canvas" style="border: 1px solid black;" width="112" height="112"></canvas>
-    </div>
-  </div>
-
-  <script src="/javascript/main.js"></script>
-
-  <p></p>
-
-  <div id="outer">
+        <div id="outer">
       <div id="left">
         <div class="buttonbar">
           <button type="button" id="train">Train</button>
@@ -95,12 +93,16 @@
           <button type="button" id="clear">Clear</button>
         </div>
       </div>
+  </div>
     </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.2.0/math.min.js"
-      integrity="sha512-5ch7MAn3LJHCHL6ri6nmXAyaQRHfmug70F7IwEQ41rnNQSGAMVyZBPTTKlaptPnq/42RXbKb/lTHm+mCQc6lPg=="
-      crossorigin="anonymous"
-    ></script>
+  </div>
+
+  <script src="/javascript/main.js"></script>
+
+  <p></p>
+
+
+    
     <script type="text/javascript">
       const status = document.getElementById("status");
       const download = document.getElementById("download");
