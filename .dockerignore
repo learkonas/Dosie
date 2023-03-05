@@ -3,3 +3,10 @@ node_modules
 .vscode
 .idea
 .readmes
+
+
+mnist
+img
+nn.js
+nn-with-stop.js
+styles.css

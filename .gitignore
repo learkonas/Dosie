@@ -4,6 +4,15 @@ node_modules
 t.js
 notes.txt
 config.json
+.dockerignore
+/gcloudignore
+
+
+mnist
+img
+nn.js
+nn-with-stop.js
+styles.css
 
 # Logs
 logs
