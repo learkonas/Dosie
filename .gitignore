@@ -10,6 +10,10 @@ config.json
 chatbot.py
 c3posts.csv
 
+test.py
+chat.py
+c3posts.csv
+
 mnist
 img
 nn.js
