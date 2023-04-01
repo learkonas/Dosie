@@ -1,15 +1,22 @@
 .dockerignore
+.gcloudignore
 node_modules
 .vscode
 .idea
 .readmes
 
+t.js
+test.py
 
 mnist
+dist
 img
 nn.js
 nn-with-stop.js
 styles.css
 
 chatbot.py
+c3posts.csv
+chat.py
+
 c3posts.csv
