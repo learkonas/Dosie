@@ -13,6 +13,7 @@ c3posts.csv
 test.py
 chat.py
 c3posts.csv
+document_embeddings.csv
 
 mnist
 img
