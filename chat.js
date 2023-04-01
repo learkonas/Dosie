@@ -1,8 +1,9 @@
 const { Configuration, OpenAIApi } = require("openai");
 const readline = require('readline');
+require('dotenv').config() // see https://github.com/motdotla/dotenv
 
 const configuration = new Configuration({
-  apiKey: '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'
+  apiKey: process.env.OPENAI_API_KEY
 });
 const openai = new OpenAIApi(configuration);
 

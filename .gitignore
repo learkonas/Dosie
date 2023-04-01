@@ -5,7 +5,7 @@ t.js
 notes.txt
 config.json
 .dockerignore
-/gcloudignore
+.gcloudignore
 
 chatbot.py
 c3posts.csv
