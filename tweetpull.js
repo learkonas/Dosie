@@ -3,7 +3,7 @@ require('dotenv').config() // see https://github.com/motdotla/dotenv
 
 var tweetpush = require('./tweetpush')
 
-const TWEET_ID = "1600222399349211136";  // Tweet: 1596887480027869189; Thread: 1575762790325047298. This is the crucial tweet ID that determines everything else
+const TWEET_ID = "1575762826206904320";  // Tweet: 1596887480027869189; Thread: 1575762790325047298. This is the crucial tweet ID that determines everything else
 var finalArray = []; // this will be the final array of all the tweets etc that we use to populate a page in the Notion DB
 var coreStats = [];  // this will be the final array of the core data we add into that Notion DB page
 
