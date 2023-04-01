@@ -47,10 +47,8 @@ app.set('view engine', 'ejs')
 
 
 var PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`Hello from Cloud Run! The container started successfully and is listening for HTTP requests on ${PORT}`);
-});
-
+app.listen(PORT);
+console.log(`You're listening on the port ${PORT}!`);
 
 
 app.post('/message', async (req, res) => {   // handle incoming POST requests to the /message endpoint
@@ -70,8 +68,8 @@ app.post('/message', async (req, res) => {   // handle incoming POST requests to
       ],
       temperature: 0.3,
     });
+    const botMessage = completion.data.choices[0].message.content.text.trim(); // extract the generated text from the API response
+    res.json({ botMessage });   // send the bot's response back to the client as a JSON object
   }
   generateText(userMessage);
-  const botMessage = completion.data.choices[0].message.content.text.trim(); // extract the generated text from the API response
-  res.json({ botMessage });   // send the bot's response back to the client as a JSON object
 });
