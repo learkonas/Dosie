@@ -3,7 +3,7 @@ const readline = require('readline');
 require('dotenv').config() // see https://github.com/motdotla/dotenv
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: "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"
 });
 const openai = new OpenAIApi(configuration);
 
@@ -22,6 +22,7 @@ async function generateText(prompt) {
     temperature: 0.3,
   });
   console.log("Host:", completion.data.choices[0].message.content);
+  
   rl.question('You: ', (prompt) => {
     if(prompt=="###"){
       console.log("Closing chat. Speak soon!")
@@ -35,7 +36,14 @@ async function generateText(prompt) {
 }
 
 rl.question('You: ', (prompt) => {
+    if(prompt=="###"){
+      console.log("Closing chat. Speak soon!")
+      rl.close();
+      process.exit();
+    }
+    else {
   generateText(prompt);
+    }
 });
 
 

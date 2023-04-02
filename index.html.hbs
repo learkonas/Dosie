@@ -50,59 +50,22 @@
       chatbox.appendChild(chatMessage);
       
       //async function sendMessage(text) {}
-      const response = await fetch('/message', {
+      const response = await fetch('https://eo1kzmelohbf68b.m.pipedream.net', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userMessage }),
       });
-      //const { botMessage: botText } = await response.json();
-      const botText = `This is the bot's response to "${userMessage}"`; // Feed user input into JS script and get the response here
-      
+      var botText = await response.text();
+      console.log(botText)
 
       const botMessage = document.createElement('p');
       botMessage.classList.add('bg-primary', 'text-white', 'p-2', 'my-3', 'rounded');
-      botMessage.innerText = `Bot: ${botText}`;
+      botMessage.innerText = `Host: ${botText}`;
       chatbox.appendChild(botMessage);
       chatbox.scrollTop = chatbox.scrollHeight;
 
       userInput.value = '';
     });
-  </script>
-  <!script>
-  const chatboxx = document.getElementById('chat');
-  const formx = document.querySelector('form');
-  const input = document.getElementById('userInput');
-
-  formx.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const text = input.value;
-    if (text.trim()) {
-      const message = document.createElement('div');
-      message.className = 'message message-user';
-      message.innerHTML = text;
-      console.log("in formx test trim")
-      chatboxx.appendChild(message);
-      input.value = '';
-      sendMessage(text);
-    }
-  });
-
-  async function sendMessage(text) {
-    const response = await fetch('/chat', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ text })
-    });
-    console.log("sent /chat request")
-    const message = await response.json();
-    const reply = message.message;
-    const botMessage = document.createElement('div');
-    botMessage.className = 'message message-bot';
-    botMessage.innerHTML = reply;
-    chatboxx.appendChild(botMessage);
-  }
   </script>
 </body>
 </html>
