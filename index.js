@@ -2,7 +2,8 @@ const express = require('express');
 const {readFileSync} = require('fs');
 const handlebars = require('handlebars');
 const { Configuration, OpenAIApi } = require("openai");
-
+require('dotenv').config() // see https://github.com/motdotla/dotenv
+// gcloud run deploy --source . (this line including the . will deploy successfully)
 var bodyParser = require('body-parser')
 
 
@@ -53,12 +54,14 @@ console.log(`You're listening on the port ${PORT}!`);
 
 app.post('/message', async (req, res) => {   // handle incoming POST requests to the /message endpoint
   const { userMessage } = req.body; // assuming the user's message is sent in the "userMessage" field of the POST body
+  
   // send the user's message to the OpenAI API and get the response
   const configuration = new Configuration({
-    apiKey: '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'
+    apiKey: process.env.OPENAI_API_KEY
   });
   const openai = new OpenAIApi(configuration);
-
+  console.log("message is running on this prompt:", prompt)
+  
   async function generateText(prompt) {
     const completion = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
@@ -68,8 +71,9 @@ app.post('/message', async (req, res) => {   // handle incoming POST requests to
       ],
       temperature: 0.3,
     });
-    const botMessage = completion.data.choices[0].message.content.text.trim(); // extract the generated text from the API response
-    res.json({ botMessage });   // send the bot's response back to the client as a JSON object
+    const botMessage = completion.data.choices[0].message.content.text; // extract the generated text from the API response
+    
+    res.json({ prompt });   // send the bot's response back to the client as a JSON object
   }
   generateText(userMessage);
 });
