@@ -3,7 +3,7 @@ const readline = require('readline');
 require('dotenv').config() // see https://github.com/motdotla/dotenv
 
 const configuration = new Configuration({
-  apiKey: "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"
+  apiKey: process.env.OPENAI_API_KEY
 });
 const openai = new OpenAIApi(configuration);
 
