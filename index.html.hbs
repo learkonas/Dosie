@@ -43,17 +43,18 @@
     const form = document.querySelector('form');        
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const user = userInput.value;
+      const content = userInput.value;
+      const role = "user"
       const chatMessage = document.createElement('p');
       chatMessage.classList.add('bg-secondary', 'text-white', 'p-2', 'my-3', 'rounded');
-      chatMessage.innerText = `You: ${user}`;
+      chatMessage.innerText = `You: ${content}`;
       chatbox.appendChild(chatMessage);
       
       //async function sendMessage(text) {}
       const response = await fetch('https://eo1kzmelohbf68b.m.pipedream.net', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({user}),
+        body: JSON.stringify({role, content}),
       });
       var botText = await response.text();
       console.log(botText)
