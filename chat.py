@@ -1,6 +1,8 @@
-import os
+
+
+#import os
 import openai
-openai.api_key = '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'
+#openai.api_key = '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'
 
 completion = openai.ChatCompletion.create(
   model="gpt-3.5-turbo",
@@ -9,4 +11,4 @@ completion = openai.ChatCompletion.create(
   ]
 )
 
-print(completion.choices[0].message)
+#print(completion.choices[0].message)
