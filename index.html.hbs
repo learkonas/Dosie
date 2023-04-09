@@ -2,7 +2,7 @@
 <html style="font-family: 'Trebuchet MS', Helvetica, sans-serif; margin: 0px; height:100%; background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);">
 <head>
   <title>Treasurement 2023</title>
-  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="icon" type="image/ico" href="favicon.ico">
   <style>
     .messages {
     border-radius: 10px;
@@ -54,15 +54,29 @@
     const form = document.querySelector('form');        
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const content = userInput.value;
-      const role = "user"
+      var content = userInput.value;
+      var role = "user"
       const chatMessage = document.createElement('p');
       chatMessage.classList.add('user-style', 'messages');
       chatMessage.innerText = content;
       chatbox.appendChild(chatMessage);
       
       if (content.includes("fjekvhdsngmbqaip")) {
+        var content = "We have discovered all 16 clues and have uncovered the prize! The treasure is in the attic! We are going there now. Thank you for hosting our game!";        
+        const response = await fetch('https://eog9m1u341lz6lp.m.pipedream.net', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({role, content}),
+        });
         var botText = "Congratulations, you have deciphered the secret code! The treasure is in the attic. Enjoy your prize!"
+        
+        var role = "assistant"
+        var content = "Congratulations for completing the puzzle! I hope you enjoyed playing.";
+        const response2 = await fetch('https://eog9m1u341lz6lp.m.pipedream.net', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({role, content}),
+        });
       }
       else {
       const response = await fetch('https://eo1kzmelohbf68b.m.pipedream.net', {
