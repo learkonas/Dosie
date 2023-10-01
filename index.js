@@ -2,7 +2,7 @@ const express = require('express');
 const {readFileSync} = require('fs');
 const handlebars = require('handlebars');
 const { Configuration, OpenAIApi } = require("openai");
-require('dotenv').config() // see https://github.com/motdotla/dotenv
+require('dotenv').config() 
 // gcloud run deploy --source . (this line including the . will deploy successfully)
 var bodyParser = require('body-parser')
 
