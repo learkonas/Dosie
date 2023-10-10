@@ -1,25 +1,7 @@
 .env
-.env.test
 node_modules
-t.js
-notes.txt
-config.json
 .dockerignore
 .gcloudignore
-
-chatbot.py
-c3posts.csv
-old
-test.py
-chat.py
-c3posts.csv
-document_embeddings.csv
-
-mnist
-img
-nn.js
-nn-with-stop.js
-styles.css
 
 # Logs
 logs
