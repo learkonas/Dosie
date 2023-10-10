@@ -3,33 +3,7 @@
 <head>
   <title>Treasurement 2023</title>
   <link rel="icon" type="image/ico" href="favicon.ico">
-  <style>
-    .messages {
-    border-radius: 10px;
-    padding-left: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    width: 70%;
-    margin-bottom: -5px;
-    }
-    .user-style {
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    background: linear-gradient(135deg, #0e4559, #0f5d4b);
-    color: #f4f4f4;
-    float: left;
-    }
-    .host-style {
-    font-family: 'Trebuchet MS', Helvetica, sans-serif; 
-    background: rgb(192, 198, 210);
-    color: rgb(10, 9, 11);
-    float: right;
-    }
-    .hover:hover {
-      background: linear-gradient(-60deg, #ee7752, #ff488e3a, #00bbff, #23d5ab);
-      color: white; 
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
   
 <body style="margin: 0px; padding: 5svh 10vw 5svh 10vw;">
@@ -41,9 +15,9 @@
       </div>
       <form style="margin-top: 10px; display: flex; ">
         <div style="flex-grow: 0.91;background-color: #f8f8f8; border-radius: 12px; box-shadow: 0px 5px 10px rgb(213, 213, 213); padding: 10px;">
-          <div>
+          <div style="display: flex; justify-content: space-between;">
             <input type="text" id="userInput" placeholder="Type your message here..." style="border: 2px solid rgb(227, 227, 227) !important; width: 75%; border-radius: 10px; font-size:15px; border: none; padding: 15px; font-family: 'Roboto', sans-serif; color: #333;">
-            <button type="submit" class="hover" style="float: right; width: 8%; border: 2px solid rgb(227, 227, 227); border-radius: 10px; padding: 15px; border: none; color: white; font-size:16px; background-color: #23d5ab; font-family: 'Roboto', sans-serif; text-align:center; cursor: pointer;">Send</button>
+            <button type="submit" class="hover" style="width: auto; border: 2px solid rgb(227, 227, 227); border-radius: 10px; padding: 15px; border: none; color: white; font-size:16px; background-color: #11bc94; font-family: 'Roboto', sans-serif; text-align:center; cursor: pointer;">Send</button>
           </div>
         </div> 
       </form>

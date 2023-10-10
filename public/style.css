@@ -1,0 +1,25 @@
+.messages {
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    width: 70%;
+    margin-bottom: -5px;
+    }
+    .user-style {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0e4559, #0f5d4b);
+    color: #f4f4f4;
+    float: left;
+    }
+    .host-style {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif; 
+    background: rgb(192, 198, 210);
+    color: rgb(10, 9, 11);
+    float: right;
+    }
+    .hover:hover {
+      background: linear-gradient(-60deg, #ff488e3a, #00bbff, #23d5ab);
+      color: white; 
+    }
